@@ -1,22 +1,19 @@
-package exemplo.com.model;
-
-import java.util.ArrayList;
-import java.util.List;
-
-public class CarrinhoCompras{
-
-	private List<Itens> itens;
-	
-	public CarrinhoCompras(){
-		this.itens = new ArrayList<>(Itens);
-		}
-	
-	public Double valorTotalDosItens(){
-		Double valorTotal = 0.0;
-		for(Itens item : itens){
-			valorTotal += item.getProduto().getValor();			
-		}
-		return valorTotal;
-	}
-	
+package com;
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+        IAddress address = new Address();
+        address.setName("01");
+        address.setZipCode("000001");
+ 
+        IHouse house = new House();
+        house.setAddress(address);
+ 
+        IPerson person = new Person();
+        person.setHouse(house);
+ 
+        // Print the person zip code
+        System.out.println(person.getHouse().getAddress().getZipCode());
+    }
 }

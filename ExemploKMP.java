@@ -20,10 +20,10 @@ private List < Integer > busca() {
 		while ( s > -1 && padrao [ s + 1] != texto [ i ]){
 		s = prefixos [ s ];
 		}
-			if ( padrao [ s + 1]== texto [ i ]){
+		if ( padrao [ s + 1]== texto [ i ]){
 			s ++;
 		}
-			if ( s == m - 1) {
+		if ( s == m - 1) {
 			resultado . add (i - m +1);
 			s = prefixos [ s ];
 		}
